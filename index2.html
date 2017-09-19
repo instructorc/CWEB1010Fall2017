@@ -15,15 +15,44 @@
 
         <!--Interal Style below-->
         <style>
+            html, body, div, span, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            abbr, address, cite, code,
+            del, dfn, em, img, ins, kbd, q, samp,
+            small, strong, sub, sup, var,
+            b, i,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section, summary,
+            time, mark, audio, video {
+                margin:0;
+                padding:0;
+                border:0;
+                outline:0;
+                font-size:100%;
+                vertical-align:baseline;
+                background:transparent;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+            }
+
+            a:visited{
+                color: white;
+            }
+            a:hover{
+                color: aquamarine;
+            }
             body{
-                background-image: url("http://prod.static.vikings.clubs.nfl.com/assets/img/bg/background.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
+
 
             }
             #banner{
                 width: 100%;
-                height: 400px;
+                height: 500px;
                 background-color:darkolivegreen;
 
             }
@@ -32,10 +61,28 @@
                 width: 100%;
             }
             #container{
-                width: 1000px;
-                margin: auto;
 
 
+
+            }
+            #headstruct{
+
+                height: 135px;
+                background-color: #24292e;
+            }
+            #logo{
+                width: 175px;
+                float: left;
+            }
+            #navstruct{
+
+                width: 450px;
+                float: right;
+                margin-top: 20px;
+            }
+            .listruct{
+                display: inline;
+                margin: 10px;
             }
 
         </style>
@@ -46,37 +93,35 @@
         </script>
     </head>
     <body>
-        <div id="container">
-            <header>
-                <div id="logo"><img src="http://via.placeholder.com/200x150" alt="logo"> </div>
-                <nav>
-                    <ul>
-                        <li><a href="index2.html">home</a></li>
-                        <li><a href="about02.html">about us</a></li>
-                        <li><a href="contact02.html">contact us</a></li>
-                        <li><a href="http://amazon.com">Amazon</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div id="banner">
-                <!--Implementing scrolling banner-->
-            </div>
-            <article>
-                    <video autoplay="autoplay" loop muted playsinline>
-                            <source src="video/working.mp4" type="video/mp4">
-                            
-                        Your browser does not support the video tag.
-                    </video>
+        <header id="headstruct">
+            <div id="logo"><img src="images/superbowllogotrans1.png" width="200" alt="logo"> </div>
+            <nav id="navstruct">
+                <ul>
+                    <li class="listruct"><a href="index2.html">home</a></li>
+                    <li class="listruct"><a href="about02.html">about us</a></li>
+                    <li class="listruct"><a href="contact02.html">contact us</a></li>
+                    <li class="listruct"><a href="http://amazon.com">Amazon</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="banner">
+            <video autoplay="autoplay" loop muted playsinline>
+                    <source src="video/working.mp4" type="video/mp4">
+                    
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <article>
 
-                    <h1>Shorter Work Week</h1>
-                    <p>This is an example of a paragraph</p>
-                    <p>This is an example of another paragraph in my website</p>
 
-            </article>
-            <footer>
-                <!--Demonstration of CSS Grid-->
+                <h1>Shorter Work Week</h1>
+                <p>This is an example of a paragraph</p>
+                <p>This is an example of another paragraph in my website</p>
 
-            </footer>
-        </div><!--closing container tag-->
+        </article>
+        <footer>
+            <!--Demonstration of CSS Grid-->
+
+        </footer>
     </body>
 </html>
