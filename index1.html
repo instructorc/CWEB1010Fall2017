@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
     <head>
         <title>Super Bowl Events App</title>
         <!--Linking to favicon in tab-->
         <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/7a/9e/0e/7a9e0e9d1b6f03ad8fc4bb71726c69b8--emoji-faces-smiley-faces.jpg">
+
+        <meta charset="UTF-8">
+        <meta name="description" content="CWEB1010 introduction to HTML5">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="C. Fulton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Internal CSS Styling-->
         <style>
             html, body, div, span, object, iframe,
@@ -28,7 +34,7 @@
             }
             body{
                 /**Remove background properties**/
-               
+                
                 background-repeat: no-repeat;
                 background-position: center;
             }
@@ -54,28 +60,50 @@
                 width: 1000px;
                 margin: auto;
             }
+            #logo{
+                float: left;
+                width: 225px;
+            }
+            #navstruct{
+                width: 450px;
+                float: right;
+                margin-top: 35px;
+            }
+            #headstruct{
+                height: 110px;
+            }
+            .listruct{
+                margin: 10px;
+                display: inline;
+                padding: 10px;
+            }
+
+            .listruct:hover{
+
+                background-color: black;
+                color: white;
+            }
+
+            .liststruct a:hover{
+                color:white;
+                text-decoration: none;
+            }
 
         </style>
-        <meta charset="UTF-8">
-        <meta name="description" content="CWEB1010 introduction to HTML5">
-        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-        <meta name="author" content="C. Fulton">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!--Linking to external Stylesheet-->
         <link href="style.css" rel="stylesheet" type="text/css"/>
 
     </head>
     <body>
 
-            <header>
-                <div id="logo"><img src="http://via.placeholder.com/200x150" alt="alternative text"></div>
-                <nav>
+            <header id="headstruct">
+                <div id="logo"><img src="http://via.placeholder.com/175x100" alt="alternative text"></div>
+                <nav id="navstruct">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Contact Us</a></li>
-                        <li><a href="">Sign-in/Create an Account</a></li>
+                        <li class="listruct"><a href="">Home</a></li>
+                        <li class="listruct"><a href="">About Us</a></li>
+                        <li class="listruct"><a href="">Contact Us</a></li>
+                        <li class="listruct"><a href="">Sign-in/Create an Account</a></li>
                     </ul>
 
                 </nav>
@@ -89,7 +117,7 @@
             </div>
             <!--Things that change will go in between the header and footer-->
             <article>
-
+                <a href="http://google.com"><img src="https://vignette1.wikia.nocookie.net/blogclan-2/images/4/45/Random-turtle.gif/revision/latest?cb=20160706220110" alt="turtle on its back"/> </a>
 
             </article>
             
