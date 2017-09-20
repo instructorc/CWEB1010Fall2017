@@ -32,6 +32,25 @@
                 vertical-align:baseline;
                 background:transparent;
             }
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            a:link{
+                color:white;
+            }
+            a:visited{
+                color: white;
+            }
+
+            a:hover{
+                color: aquamarine;
+
+            }
+
+            a:active{
+                color: red;
+            }
             body{
                 /**Remove background properties**/
                 
@@ -41,7 +60,7 @@
             #banner{
                 width: 100%;
                 height: 800px;
-                background-color:darkolivegreen;
+                background-image: url(images/backdrop.png);
             }
 
             #bannertext{
@@ -65,12 +84,13 @@
                 width: 225px;
             }
             #navstruct{
-                width: 450px;
+                width: 550px;
                 float: right;
                 margin-top: 35px;
             }
             #headstruct{
                 height: 110px;
+                background-color: #24292e;
             }
             .listruct{
                 margin: 10px;
@@ -78,16 +98,8 @@
                 padding: 10px;
             }
 
-            .listruct:hover{
 
-                background-color: black;
-                color: white;
-            }
 
-            .liststruct:hover a{
-                color:white;
-                text-decoration: none;
-            }
 
         </style>
         <!--Linking to external Stylesheet-->
@@ -97,7 +109,7 @@
     <body>
 
             <header id="headstruct">
-                <div id="logo"><img src="http://via.placeholder.com/175x100" alt="alternative text"></div>
+                <div id="logo"><a href="index1.html"><img src="images/superbowllogotrans1.png" width="180" alt="Super Bowl App Logo"></a></div>
                 <nav id="navstruct">
                     <ul>
                         <li class="listruct"><a href="">Home</a></li>
@@ -109,10 +121,7 @@
                 </nav>
             </header>
             <div id="banner">
-                <video autoplay="autoplay" muted loop>
-                    <source src="video/workingvideo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+
                 <h1 id="bannertext"> HTML5 Sample site </h1>
             </div>
             <!--Things that change will go in between the header and footer-->
