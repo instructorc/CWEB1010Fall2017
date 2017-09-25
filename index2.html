@@ -12,9 +12,20 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <!--Adding favicon-->
         <link rel="icon" type="image/png" href="https://i.pinimg.com/favicons/0e8c985ce5838b733b7dd73f914ddb55d1050a3e6a21fa5cb23c27b8.png?8cd1616f1bee51c05bc38276483e39db">
-
+        <!--Google font-->
+        <link href="https://fonts.googleapis.com/css?family=Changa+One|Marvel:400,700" rel="stylesheet">
         <!--Interal Style below-->
         <style>
+            @font-face {
+                font-family: 'changa';
+                src: url('fonts/changaone-regular.eot'); /* IE9 Compat Modes */
+                src: url('fonts/changaone-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                    url('fonts/changaone-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                    url('fonts/changaone-regular.woff') format('woff'), /* Pretty Modern Browsers */
+                    url('fonts/changaone-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+                    url('fonts/changaone-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+            }
+
             html, body, div, span, object, iframe,
             h1, h2, h3, h4, h5, h6, p, blockquote, pre,
             abbr, address, cite, code,
@@ -50,6 +61,11 @@
                 color: red;
 
             }
+            h2{
+                font-family: 'Marvel', sans-serif;
+                font-size: 5em;
+                color: white;
+            }
             body{
 
 
@@ -57,8 +73,15 @@
             #banner{
                 width: 100%;
                 height: 500px;
+                padding-top: 8em;
                 background-image: url(images/backdrop.png);
 
+            }
+            #bannertext{
+                font-size: 4em;
+                font-family: 'changa', Arial, Helvetica, sans-serif;
+                color: white;
+                text-align: center;
             }
 
             video{
@@ -109,7 +132,8 @@
             </nav>
         </header>
         <div id="banner">
-
+            <h1 id="bannertext">OFFICIAL EVENT LIST OF SUPER BOWL LII </h1>
+            <h2>Testing the font to see if the api call works</h2>
         </div>
         <article>
 
