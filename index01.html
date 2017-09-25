@@ -7,9 +7,19 @@
         <meta name="keywords" content="HTML5,CSS,XML,JavaScript">
         <meta name="author" content="C. Fulton">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <!--Incoporating Google font via api call-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
         <!--Internal CSS Method below-->
         <style>
+            @font-face {
+            font-family: 'agency';
+                src: url('fonts/agency-fb.eot'); /* IE9 Compat Modes */
+                src: url('fonts/agency-fb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                    url('fonts/agency-fb.woff2') format('woff2'), /* Super Modern Browsers */
+                    url('fonts/agency-fb.woff') format('woff'), /* Pretty Modern Browsers */
+                    url('fonts/agency-fb.ttf')  format('truetype'), /* Safari, Android, iOS */
+                    url('fonts/agency-fb.svg#svgFontName') format('svg'); /* Legacy iOS */
+            }
             html, body, div, span, object, iframe,
             h1, h2, h3, h4, h5, h6, p, blockquote, pre,
             abbr, address, cite, code,
@@ -46,6 +56,11 @@
 
                 color: red;
             }
+            h2{
+                font-size: 2em;
+                color: white;
+                font-family: 'Open Sans Condensed', sans-serif;
+            }
             body{
 
             }
@@ -53,7 +68,14 @@
                 width: 100%;
                 height: 600px;
                 background-image: url(images/backdrop.png);
+                padding-top: 8em;
 
+            }
+            #bannertext{
+                font-size: 6em;
+                color: white;
+                text-align: center;
+                font-family: 'agency', Arial, Helvetica, sans-serif;
             }
             video{
 
@@ -108,8 +130,8 @@
             </nav>
         </header>
         <div id="banner">
-
-
+            <h1 id="bannertext">OFFICIAL EVENT LIST OF SUPER BOWL LII </h1>
+            <h2>This is a google api call to a font</h2>
         </div>
         <article>
             <h1> Work Life Balance</h1>
