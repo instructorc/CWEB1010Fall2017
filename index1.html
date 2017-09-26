@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HTML5 Review</title>
+        <title>Super Bowl Events App</title>
         <!--Linking to favicon in tab-->
         <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/7a/9e/0e/7a9e0e9d1b6f03ad8fc4bb71726c69b8--emoji-faces-smiley-faces.jpg">
+
+        <meta charset="UTF-8">
+        <meta name="description" content="CWEB1010 introduction to HTML5">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="C. Fulton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Internal CSS Styling-->
         <style>
+<<<<<<< HEAD
            a{
                     color: white;
                     text-decoration: none;
@@ -17,16 +24,85 @@
                 width: 100%;
                 height: 275px;
                 background-image: url(images/minneapolis-Backdrop.png);
+=======
+            @font-face {
+                font-family: 'agency';
+                src: url('fonts/agency-fb.eot'); /* IE9 Compat Modes */
+                src: url('fonts/agency-fb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                    url('fonts/agency-fb.woff2') format('woff2'), /* Super Modern Browsers */
+                    url('fonts/agency-fb.woff') format('woff'), /* Pretty Modern Browsers */
+                    url('fonts/agency-fb.ttf')  format('truetype'), /* Safari, Android, iOS */
+                    url('fonts/agency-fb.svg#svgFontName') format('svg'); /* Legacy iOS */
             }
 
-            #bannertext{
-                width: 600px;
-                font-size: 4em;
+            html, body, div, span, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            abbr, address, cite, code,
+            del, dfn, em, img, ins, kbd, q, samp,
+            small, strong, sub, sup, var,
+            b, i,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section, summary,
+            time, mark, audio, video {
+                margin:0;
+                padding:0;
+                border:0;
+                outline:0;
+                font-size:100%;
+                vertical-align:baseline;
+                background:transparent;
+            }
+
+            a{
                 color: white;
-                margin: auto;
-                padding-top: 75px;
+                text-decoration: none;
+            }
+            a:link{
+                color:white;
+            }
+            a:visited{
+                color: white;
+            }
+
+            a:hover{
+                color: aquamarine;
 
             }
+
+            a:active{
+                color: red;
+            }
+            h2{
+                font-family: 'Open Sans Condensed', sans-serif;
+                
+            }
+            body{
+                /**Remove background properties**/
+                color: white;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            #banner{
+                width: 100%;
+                height: 800px;
+                background-image: url(images/backdrop.png);
+                
+>>>>>>> section04
+            }
+
+            h1{
+            
+                text-align: center;
+                font-size: 4em;
+                margin: auto;
+                padding-top: 3em;
+                font-family: 'agency', Arial, Helvetica, sans-serif;
+
+            }
+<<<<<<< HEAD
             video {
 
                 width: 100%;
@@ -40,10 +116,39 @@
                 width: 450px;
                 float: right;
                 margin-top: 20px;
+=======
+            h2{
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-size: 2.3em;
+                text-align: center;
+                font-weight: 300;
+            }
+            video{
+                width: 100%;
+            }
+            #container{
+
+                width: 1000px;
+                margin: auto;
+            }
+            #logo{
+                float: left;
+                width: 225px;
+            }
+            #navstruct{
+                width: 550px;
+                float: right;
+                margin-top: 35px;
+            }
+            #headstruct{
+                height: 110px;
+                background-color: #24292e;
+>>>>>>> section04
             }
             .listruct{
                 margin: 10px;
                 display: inline;
+<<<<<<< HEAD
 
 
             }
@@ -51,19 +156,23 @@
                 height: 135px;
                 background-color: #24292e;
             }
+=======
+                padding: 10px;
+            }
+
+
+>>>>>>> section04
+
 
         </style>
-        <meta charset="UTF-8">
-        <meta name="description" content="CWEB1010 introduction to HTML5">
-        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-        <meta name="author" content="C. Fulton">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <!--Google api font-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
         <!--Linking to external Stylesheet-->
         <link href="style.css" rel="stylesheet" type="text/css"/>
 
     </head>
     <body>
+<<<<<<< HEAD
         <header id="headstruct">
             <div id="logo"><img src="http://via.placeholder.com/200x125" alt="alternative text"></div>
             <nav id="navstruct">
@@ -85,10 +194,34 @@
             <h2>Mission Statement</h2>
             <p>This site will introduce you the basic elements of HTML5<p>
                 
+=======
+>>>>>>> section04
 
-        </article>
-        
-        <footer>
-        </footer>
+            <header id="headstruct">
+                <div id="logo"><a href="index1.html"><img src="images/superbowllogotrans1.png" width="180" alt="Super Bowl App Logo"></a></div>
+                <nav id="navstruct">
+                    <ul>
+                        <li class="listruct"><a href="">Home</a></li>
+                        <li class="listruct"><a href="">About Us</a></li>
+                        <li class="listruct"><a href="">Contact Us</a></li>
+                        <li class="listruct"><a href="">Sign-in/Create an Account</a></li>
+                    </ul>
+
+                </nav>
+            </header>
+            <div id="banner">
+
+                <h1> OFFICIAL EVENT LIST OF SUPER BOWL LII  </h1>
+                <h2>Click the button below to create a list of events you would like to attend</h2>
+            </div>
+            <!--Things that change will go in between the header and footer-->
+            <article>
+                <a href="http://google.com"><img src="https://vignette1.wikia.nocookie.net/blogclan-2/images/4/45/Random-turtle.gif/revision/latest?cb=20160706220110" alt="turtle on its back"/> </a>
+
+            </article>
+            
+            <footer>
+            </footer>
+
     </body>
 </html>
