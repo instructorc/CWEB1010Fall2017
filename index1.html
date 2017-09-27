@@ -12,19 +12,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Internal CSS Styling-->
         <style>
-<<<<<<< HEAD
-           a{
-                    color: white;
-                    text-decoration: none;
-            }
-            a:visited{
-                    color: white;
-            }
-            #banner{
-                width: 100%;
-                height: 275px;
-                background-image: url(images/minneapolis-Backdrop.png);
-=======
             @font-face {
                 font-family: 'agency';
                 src: url('fonts/agency-fb.eot'); /* IE9 Compat Modes */
@@ -87,36 +74,22 @@
             }
             #banner{
                 width: 100%;
-                height: 800px;
+                height: 580px;
                 background-image: url(images/backdrop.png);
+                background-size: cover;
+                background-position: center;
                 
->>>>>>> section04
             }
 
             h1{
             
                 text-align: center;
-                font-size: 4em;
+                font-size: 5em;
                 margin: auto;
-                padding-top: 3em;
+                padding-top: 2em;
                 font-family: 'agency', Arial, Helvetica, sans-serif;
 
             }
-<<<<<<< HEAD
-            video {
-
-                width: 100%;
-            }
-            #logo{
-
-                width: 200px;
-                float: left;
-            }
-            #navstruct{
-                width: 450px;
-                float: right;
-                margin-top: 20px;
-=======
             h2{
                 font-family: 'Open Sans Condensed', sans-serif;
                 font-size: 2.3em;
@@ -133,36 +106,51 @@
             }
             #logo{
                 float: left;
-                width: 225px;
+                width: auto;
+                margin: 8px 0px 0px 10px;
             }
             #navstruct{
-                width: 550px;
+                width: auto;
                 float: right;
-                margin-top: 35px;
+                margin-top: 27px;
             }
             #headstruct{
                 height: 110px;
                 background-color: #24292e;
->>>>>>> section04
+                font-family: 'agency', Arial, Helvetica, sans-serif;
             }
             .listruct{
-                margin: 10px;
+                margin: 6px;
                 display: inline;
-<<<<<<< HEAD
-
-
+                font-size: 1.2em;
+                border: 4px solid #2F3E71;
+                padding: 10px 16px;
+                border-radius: 10px;
+            }
+            .reg{
+                background-color: #2F3E71;
             }
             #headstruct{
-                height: 135px;
+                height: 75px;
                 background-color: #24292e;
             }
-=======
-                padding: 10px;
+            .container{
+                width: 85%;
+                margin: auto;
             }
-
-
->>>>>>> section04
-
+            #flexcontain{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            section[class="eventbox"]{
+                
+                height: 250px;
+                background-color: #eee;
+                flex: 1 0 300px;
+                justify-content: space-evenly;
+                margin: 5px;
+            }
 
         </style>
         <!--Google api font-->
@@ -172,55 +160,68 @@
 
     </head>
     <body>
-<<<<<<< HEAD
-        <header id="headstruct">
-            <div id="logo"><img src="http://via.placeholder.com/200x125" alt="alternative text"></div>
-            <nav id="navstruct">
-                <ul>
-                    <li class="listruct"><a href="index1.html">Home</a></li>
-                    <li class="listruct"><a href="about1.html">About Us</a></li>
-                    <li class="listruct"><a href="http://google.com">Google</a></li>
-                    <li class="listruct"><a href="contact1.html">Contact Us</a></li>
-                </ul>
-
-            </nav>
-        </header>
-        <div id="banner">
-
-            <h1 id="bannertext"> HTML5 Sample site </h1>
-        </div>
-        <!--Things that change will go in between the header and footer-->
-        <article>
-            <h2>Mission Statement</h2>
-            <p>This site will introduce you the basic elements of HTML5<p>
-                
-=======
->>>>>>> section04
 
             <header id="headstruct">
-                <div id="logo"><a href="index1.html"><img src="images/superbowllogotrans1.png" width="180" alt="Super Bowl App Logo"></a></div>
-                <nav id="navstruct">
-                    <ul>
-                        <li class="listruct"><a href="">Home</a></li>
-                        <li class="listruct"><a href="">About Us</a></li>
-                        <li class="listruct"><a href="">Contact Us</a></li>
-                        <li class="listruct"><a href="">Sign-in/Create an Account</a></li>
-                    </ul>
+                <div class="container">
+                    <div id="logo"><a href="index1.html"><img src="images/superbowllogotrans1.png" width="100" alt="Super Bowl App Logo"></a></div>
+                    <nav id="navstruct">
+                        <ul>
 
-                </nav>
+                            <li class="listruct signin"><a href="">SIGN-IN</a></li>
+                            <li class="listruct reg"><a href="">CREATE A LIST</a></li>
+                        </ul>
+
+                    </nav>
+                </div><!--End of container nested within header-->
             </header>
             <div id="banner">
 
                 <h1> OFFICIAL EVENT LIST OF SUPER BOWL LII  </h1>
-                <h2>Click the button below to create a list of events you would like to attend</h2>
+                <h2>Click the button below to create an account and make a preferred list of events you would like to attend</h2>
             </div>
             <!--Things that change will go in between the header and footer-->
-            <article>
-                <a href="http://google.com"><img src="https://vignette1.wikia.nocookie.net/blogclan-2/images/4/45/Random-turtle.gif/revision/latest?cb=20160706220110" alt="turtle on its back"/> </a>
+            <div class="container">
+                <main id="flexcontain">
+                    <section class="eventbox">
+                        
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
+                    <section class="eventbox">
+                    </section>
 
-            </article>
+                </main>
+            </div><!--End of container-->
             
             <footer>
+                <div class="container">
+                </div>
             </footer>
 
     </body>
