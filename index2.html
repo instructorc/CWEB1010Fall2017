@@ -16,15 +16,15 @@
         <link href="https://fonts.googleapis.com/css?family=Changa+One|Marvel:400,700" rel="stylesheet">
         <!--Interal Style below-->
         <style>
-            @font-face {
-                font-family: 'changa';
-                src: url('fonts/changaone-regular.eot'); /* IE9 Compat Modes */
-                src: url('fonts/changaone-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                    url('fonts/changaone-regular.woff2') format('woff2'), /* Super Modern Browsers */
-                    url('fonts/changaone-regular.woff') format('woff'), /* Pretty Modern Browsers */
-                    url('fonts/changaone-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-                    url('fonts/changaone-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
-            }
+	    @font-face {
+			font-family: 'agency';
+			src: url('fonts/agency-fb.eot'); /* IE9 Compat Modes */
+			src: url('fonts/agency-fb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('fonts/agency-fb.woff2') format('woff2'), /* Super Modern Browsers */
+				url('fonts/agency-fb.woff') format('woff'), /* Pretty Modern Browsers */
+				url('fonts/agency-fb.ttf')  format('truetype'), /* Safari, Android, iOS */
+				url('fonts/agency-fb.svg#svgFontName') format('svg'); /* Legacy iOS */
+		}
 
             html, body, div, span, object, iframe,
             h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -77,11 +77,21 @@
                 background-image: url(images/backdrop.png);
 
             }
-            #bannertext{
-                font-size: 4em;
-                font-family: 'changa', Arial, Helvetica, sans-serif;
-                color: white;
+            h1{
                 text-align: center;
+                font-size: 5em;
+                margin: auto;
+                padding-top: 2em;
+                font-family: 'agency', Arial, Helvetica, sans-serif;
+                word-spacing: 6px;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+            h2{
+                font-size: 2.3em;
+                text-align: center;
+                font-weight: 300;
+                color: white;
             }
 
             video{
@@ -94,7 +104,7 @@
             }
             #headstruct{
 
-                height: 135px;
+                height: 100px;
                 background-color: #24292e;
             }
             #logo{
@@ -121,7 +131,7 @@
     </head>
     <body>
         <header id="headstruct">
-            <div id="logo"><img src="images/superbowllogotrans1.png" width="200" alt="logo"> </div>
+            <div id="logo"><img src="images/superbowllogotrans1.png" width="100" alt="logo"> </div>
             <nav id="navstruct">
                 <ul>
                     <li class="listruct"><a href="index2.html">home</a></li>
