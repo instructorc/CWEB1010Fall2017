@@ -69,6 +69,7 @@
                 height: 600px;
                 background-image: url(images/backdrop.png);
                 padding-top: 8em;
+                background-size: cover;
 
             }
             h1{
@@ -101,27 +102,36 @@
                 width: 100%;
 
             }
-            #container{
-                width: 1000px;
+            .container{
+                width: 85%;
                 margin: auto;
             }
             #headstruct{
                 height: 75px;
                 background-color: #24292e;
                 width: 100%;
+                font-family: 'agency', Arial, Helvetica, sans-serif;
             }
             #navstruct{
                 width: auto;
                 float: right;
-                margin-top: 20px;
+                margin-top: 27px;
             }
             #logo{
-                width: 200px;
+                width: 150px;
                 float: left;
+                margin: 10px 0px 0px 8px;
             }
             .listruct{
                 display: inline;
-                margin: 10px;
+                margin: 6px;
+                padding: 10px 16px;
+                border: 4px solid #2f3e71;
+                font-size: 1.2em;
+                border-radius: 10px;
+            }
+            .reg{
+                background-color: #2f3e71;
             }
 
         </style>
@@ -138,14 +148,16 @@
     </head>
     <body>
         <header id="headstruct">
-            <div id="logo"><a href="http://google.com"><img src="images/superbowllogotrans1.png" width="100" alt="logo"></a></div>
-            <nav id="navstruct">
-                <ul>
+            <div class="container">
+                <div id="logo"><a href="http://google.com"><img src="images/superbowllogotrans1.png" width="100" alt="logo"></a></div>
+                <nav id="navstruct">
+                    <ul>
 
-                    <li class="listruct"><a href="">SIGN-UP</a></li>
-                    <li class="listruct"><a href="">CREATE A LIST</a></li>
-                </ul>
-            </nav>
+                        <li class="listruct"><a href="">SIGN-UP</a></li>
+                        <li class="listruct reg"><a href="">CREATE A LIST</a></li>
+                    </ul>
+                </nav>
+            </div><!--End of container for header-->
         </header>
         <div id="banner">
             <h1>OFFICIAL EVENT LIST OF SUPER BOWL LII</h1>
