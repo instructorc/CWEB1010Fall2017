@@ -98,15 +98,17 @@
             video{
                 width: 100%;
             }
-            #container{
-
+            .container{
+                width: 85%;
+                margin: auto;
 
 
             }
             #headstruct{
 
-                height: 100px;
+                height: 75px;
                 background-color: #24292e;
+                font-family: 'agency', Arial, Helvetica, sans-serif;
             }
             #logo{
                 width: 175px;
@@ -114,13 +116,17 @@
             }
             #navstruct{
 
-                width: 450px;
+                width: auto;
                 float: right;
-                margin-top: 20px;
+                margin-top: 27px;
             }
             .listruct{
                 display: inline;
-                margin: 10px;
+                margin: 6px;
+                border: 4px solid #2f3e71;
+                padding: 10px 16px;
+                border-radius: 10px;
+                font-size: 1.2em;
             }
 
         </style>
@@ -132,13 +138,15 @@
     </head>
     <body>
         <header id="headstruct">
-            <div id="logo"><img src="images/superbowllogotrans1.png" width="100" alt="logo"> </div>
-            <nav id="navstruct">
-                <ul>
-                    <li class="listruct"><a href="">SIGN-UP</a></li>
-                    <li class="listruct"><a href="">CREATE A LIST</a></li>
-                </ul>
-            </nav>
+            <div class="container">
+                <div id="logo"><img src="images/superbowllogotrans1.png" width="100" alt="logo"> </div>
+                <nav id="navstruct">
+                    <ul>
+                        <li class="listruct"><a href="">SIGN-UP</a></li>
+                        <li class="listruct"><a href="">CREATE A LIST</a></li>
+                    </ul>
+                </nav>
+            </div><!--End of container-->
         </header>
         <div id="banner">
             <h1>OFFICIAL EVENT LIST OF SUPER BOWL LII </h1>
