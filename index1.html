@@ -84,9 +84,9 @@
             h1{
             
                 text-align: center;
-                font-size: 4em;
+                font-size: 5em;
                 margin: auto;
-                padding-top: 3em;
+                padding-top: 2em;
                 font-family: 'agency', Arial, Helvetica, sans-serif;
 
             }
@@ -99,30 +99,50 @@
             video{
                 width: 100%;
             }
-            #container{
+            .container{
 
-                width: 1000px;
+                width: 85%;
                 margin: auto;
             }
             #logo{
                 float: left;
-                width: 225px;
+                width: 175px;
+                margin: 8px 0px 0px 10px;
             }
             #navstruct{
                 width: auto;
                 float: right;
-                margin-top: 35px;
+                margin-top: 27px;
             }
             #headstruct{
-                height: 110px;
+                height: 75px;
                 background-color: #24292e;
                 font-family: 'agency', Arial, Helvetica, sans-serif;
             }
             .listruct{
-                margin: 10px;
+                margin: 6px;
                 display: inline;
-                padding: 10px;
+                padding: 10px 16px;
                 border: 4px solid #2F3E71;
+                border-radius: 10px;
+                font-size: 1.2em;
+            }
+            .reg{
+
+                background-color: #2F3E71;
+            }
+            #regbutton{
+                width: 400px;
+                height: 50px;
+                /* border: 4px solid white; */
+                margin: auto;
+                background-color: #1080B0;
+                font-family: 'agency', Arial, Helvetica, sans-serif;
+                font-size: 2.3em;
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: .2em;
+                margin-top: 1em;
             }
 
 
@@ -138,19 +158,22 @@
     <body>
 
             <header id="headstruct">
-                <div id="logo"><a href="index1.html"><img src="images/superbowllogotrans1.png" width="180" alt="Super Bowl App Logo"></a></div>
-                <nav id="navstruct">
-                    <ul>
-                        <li class="listruct"><a href="">SIGN-IN</a></li>
-                        <li class="listruct"><a href="">CREATE A LIST</a></li>
-                    </ul>
+                <div class="container">
+                    <div id="logo"><a href="index1.html"><img src="images/superbowllogotrans1.png" width="100" alt="Super Bowl App Logo"></a></div>
+                    <nav id="navstruct">
+                        <ul>
+                            <li class="listruct"><a href="">SIGN-IN</a></li>
+                            <li class="listruct reg"><a href="">CREATE A LIST</a></li>
+                        </ul>
 
-                </nav>
+                    </nav>
+                </div><!--closing header container-->
             </header>
             <div id="banner">
 
                 <h1> OFFICIAL EVENT LIST OF SUPER BOWL LII  </h1>
                 <h2>Click the button below to create a list of events you would like to attend</h2>
+                <div id="regbutton">Click Here to start a List</div>
             </div>
             <!--Things that change will go in between the header and footer-->
             <article>
