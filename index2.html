@@ -137,9 +137,10 @@
                 height: 75px;
                 background-color: #24292e;
                 font-family: 'agency', Arial, Helvetica, sans-serif;
+                
             }
             #logo{
-                width: 175px;
+                width: 130px;
                 float: left;
                 margin: 8px 0px 0px 10px;
             }
@@ -190,6 +191,41 @@
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
+            }
+            /* smaller than 1024 pixels */
+            @media screen and (max-width: 1024px) {
+                h1{
+                    font-size: 4.3em;
+                    padding-top: 0em;
+
+                }
+                h2 {
+                    font-size: 2.1em;
+
+                }
+            }
+            /* smaller than 768 pixels */
+            @media screen and (max-width: 768px) {
+           
+            }
+            /* smaller than 480 pixels */
+            @media screen and (max-width: 480px) {
+                #headstruct{
+                    height: 185px;
+                }
+                #navstruct{
+                    margin-top: 0px;
+                    margin: 35px 0px 0px 20%;
+                    float: left;
+                }
+                img[src="images/superbowllogotrans1.png"]{
+                    width: 145px;
+                }
+                #logo {
+                    width: 130px;
+                
+                    margin: 9px 0px 0px 30%;
+                }
             }
 
 
