@@ -136,7 +136,7 @@
                 margin-top: 27px;
             }
             #logo{
-                width: 150px;
+                width: 140px;
                 float: left;
                 margin: 10px 0px 0px 8px;
             }
@@ -178,6 +178,46 @@
             #flexcontain{
                 display: flex;
                 flex-wrap: wrap;
+            }
+            /* smaller than 1024 pixels */
+            @media screen and (max-width: 1024px) {
+                #banner{
+
+                    padding-top: 2em;
+                
+
+                }
+                h1{  
+                    font-size: 4.3em;
+                }
+                h2{
+
+                font-size: 2.1em;
+
+            }
+            }
+            /* smaller than 768 pixels */
+            @media screen and (max-width: 768px) {
+           
+            }
+            /* smaller than 480 pixels */
+            @media screen and (max-width: 480px) {
+                #headstruct {
+                    height: 200px;
+
+                }
+                #navstruct {
+                    float: left;
+                    margin-top: 0px; 
+                    margin: 35px 0px 0px 20%;
+                }
+                img[src="images/superbowllogotrans1.png"]{
+                    width: 175px;
+                }
+                #logo {
+
+                    margin: 10px 0px 0px 27%;
+                }
             }
 
         </style>
