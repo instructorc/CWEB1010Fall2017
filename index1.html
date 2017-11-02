@@ -62,10 +62,7 @@
             a:active{
                 color: red;
             }
-            h2{
-                font-family: 'Open Sans Condensed', sans-serif;
-                
-            }
+
             body{
                 /**Remove background properties**/
                 color: white;
@@ -189,6 +186,39 @@
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
+            }
+
+            /* smaller than 1024 pixels */
+            @media screen and (max-width: 1024px) {
+                h1{
+                    padding-top: 1.3em;
+                }
+            
+            }
+            /* smaller than 768 pixels */
+            @media screen and (max-width: 768px) {
+                h1{
+                    font-size: 4.2em;
+                }
+                h2{
+                    font-size: 2em;
+
+                }
+            
+            }
+            /* smaller than 515 pixels */
+            @media screen and (max-width: 515px) {
+                #headstruct{
+                    height: 200px;
+
+                }
+                img[src="images/superbowllogotrans1.png"]{
+                    width: 165px;
+                }
+            }
+            /* smaller than 480 pixels */
+            @media screen and (max-width: 480px) {
+            
             }
 
 
