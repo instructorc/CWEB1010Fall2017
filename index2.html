@@ -192,6 +192,37 @@
                 display: flex;
                 flex-wrap: wrap;
             }
+            .eventbox .category{
+                text-transform: uppercase;
+                margin: -12em .7em 0em .7em;
+                width: 70px;
+                z-index: 999;
+                font-size: 1em;
+                position: sticky;
+                color: white;
+                float: right;
+                font-weight: 900;
+                border-radius: .3em;
+                padding: .2em;
+                text-align: center;
+                background-color: #1080B0;
+                font-family: 'agency', Arial, Helvetica, sans-serif;
+            }
+            #searchlabel{
+                font-family: 'agency', Arial, Helvetica, sans-serif;
+                word-spacing: 6px;
+                color: #24292e;
+                text-transform: uppercase;
+                margin-right: 1em;
+                font-size: 1.6em;
+                margin-bottom: 2em;
+            }
+            input[id="search"]{
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-size: 18px;
+                height: 26px;
+                margin-bottom: 2em;
+            }
             /* smaller than 1024 pixels */
             @media screen and (max-width: 1024px) {
                 h1{
@@ -255,77 +286,104 @@
         </div>
         <div class="container">
             <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
+            <label id="searchlabel">Seach Events by Event Title</label> <input type="text" id="search">
             <!--Demonstration of traditional float layout and Flexbox-->
             <main id="flexcontain">
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="family">
+                    <img src="images/fieldgoalkick.png" alt="field goal kicking event"> 
+                    <h4>Field Goal and Obstacle Tournament</h4>
+                    <p>Put your team to the test by going through our football training camp</p>
+                    <div class="category">Family</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/giveaway.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="family">
+                        <img src="images/giveaway.png" alt="field goal kicking event">
+                        <h4>Football hunt at US Bank Stadium</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Family</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="family">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Downtown Minneapolis Parade</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Family</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="family">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Family Movie Night at Target Center</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Family</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="night-life">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Superbowl Wine tasting on 8th Street</h4>
+                        <p>Put your team to the test by going through our football training camp</p>
+                        <div class="category">NightLife</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="free">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Field Goal and Obstacle Tournament</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Free</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="networking">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Come to Randles Restuarant and chat with Vikings Administration</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Networking</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="networking">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Field Goal and Obstacle Tournament</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Family</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="volunteer">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Superbowl 5K for non-profits orgs</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Volunteer</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="volunteer">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Mall of America Walking for dimes</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Volunteer</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="networking">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Senior Social at Dunwoody College</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Networking</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="networking">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Sports career fair at Univ. of Minnesota</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Networking</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="volunteer">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Clean and Care for a pup Superbowl showcase</h4>
+                        <p>Put your team to the test by going through our football training camp</p>
+                        <div class="category">Volunteer</div>
                 </section>
-                <section class="eventbox">
-                    <img src="images/fieldgoalkick.png" alt="Family Kicking Event">
-                    <h4>FAMILY MOVIE DAY AT US BANK STADIUM</h4>
-                    <p>Bring your family out to enjoy remember the titans on the big screen.  This is event is free to the public. Free popcorn!!</p>
+                <section class="eventbox" data-catagory="family">
+                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <h4>Family Ice Skating event outside US Bank</h4>
+                        <p>Put your team to the test by going through our football training camp </p>
+                        <div class="category">Family</div>
+                </section>
+                <section class="eventbox" data-catagory="night-life">
+                    <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                    <h4>21+ Night Bowling Superbowl tournament</h4>
+                    <p>Put your team to the test by going through our football training camp </p>
+                    <div class="category">NightLife</div>
+                </section>
+                <section class="eventbox" data-catagory="free">
+                    <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                    <h4>Toys-for-tots annual pitch-in</h4>
+                    <p>Put your team to the test by going through our football training camp</p>
+                    <div class="category">Free</div>
                 </section>
 
             </main>
