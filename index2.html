@@ -286,7 +286,7 @@
         </div>
         <div class="container">
             <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
-            <label id="searchlabel">Seach Events by Event Title</label> <input type="text" id="search">
+            <label id="searchlabel">Seach Events by Event Title</label> <input type="text" id="search" onkeyup="narrowEvents()">
             <!--Demonstration of traditional float layout and Flexbox-->
             <main id="flexcontain">
                 <section class="eventbox" data-catagory="family">
@@ -393,5 +393,31 @@
             <!--Demonstration of CSS Grid-->
 
         </footer>
+        <!--Implementation of Internal JS-->
+        <script>
+
+            function narrowEvents(){
+                //declare
+                var searchValue, eventArray, boxElements, eventTitle, i;
+                //initialize
+                searchValue = document.getElementById('search').value.toUpperCase();
+                eventArray = document.getElementsByTagName('h4');
+                boxElements = document.getElementsByTagName('section');
+                
+                i = 0;
+                while( i < eventArray.length){
+                    eventTitle = eventArray[i].innerHTML.toUpperCase();
+                    if(eventTitle.includes(searchValue)){
+                        boxElements[i].style.display = 'block';
+                    }else{
+                        boxElements[i].style.display= 'none';
+                    }
+                    i++;
+                }
+
+
+            }
+
+        </script>
     </body>
 </html>
