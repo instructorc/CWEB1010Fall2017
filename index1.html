@@ -245,6 +245,8 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
         <!--Linking to external Stylesheet-->
         <link href="style.css" rel="stylesheet" type="text/css"/>
+        <!--JQuery Implementation-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     </head>
     <body>
@@ -270,7 +272,7 @@
             <!--Things that change will go in between the header and footer-->
             <div class="container">
                 <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
-               <label>Seach Events by Category</label> <input type="text" id="search">
+               <label style="color: black;">Seach Events by Category</label> <input type="text" id="search" onkeyup="narrowEvents()">
                 
                 <main id="flexcontain">
                     <section class="eventbox" data-catagory="family">
@@ -352,28 +354,53 @@
                             <p>Put your team to the test by going through our football training camp obstacle course</p>
                             <div class="category">Volunteer</div>
                     </section>
-                    <section class="eventbox">
+                    <section class="eventbox" data-catagory="family">
                             <img src="images/fieldgoalkick.png" alt="field goal kicking event">
-                            <h4>Field Goal and Obstacle Tournament</h4>
+                            <h4>Family Ice Skating event outside US Bank</h4>
                             <p>Put your team to the test by going through our football training camp obstacle course</p>
                             <div class="category">Family</div>
                     </section>
-                    <section class="eventbox">
+                    <section class="eventbox" data-catagory="night-life">
                         <img src="images/fieldgoalkick.png" alt="field goal kicking event">
-                        <h4>Field Goal and Obstacle Tournament</h4>
+                        <h4>21+ Night Bowling Superbowl tournament</h4>
                         <p>Put your team to the test by going through our football training camp obstacle course</p>
-                        <div class="category">Family</div>
+                        <div class="category">NightLife</div>
                     </section>
-                    <section class="eventbox">
+                    <section class="eventbox" data-catagory="free">
                         <img src="images/fieldgoalkick.png" alt="field goal kicking event">
-                        <h4>Field Goal and Obstacle Tournament</h4>
+                        <h4>Toys-for-tots annual pitch-in</h4>
                         <p>Put your team to the test by going through our football training camp obstacle course</p>
-                        <div class="category">Family</div>
+                        <div class="category">Free</div>
                     </section>
                 </main>
             </div>
             <footer>
             </footer>
+
+            <script>
+
+                function narrowEvents(){
+                   var searchValue= document.getElementById('search').value.toUpperCase();
+                   var isFound = 0;
+                   var eventArray = document.getElementsByTagName('h4');
+                   var boxElements = document.getElementsByTagName('section');
+                    var i = 0;
+                   while(i < eventArray.length){
+                    var eventTitle = eventArray[i].innerHTML.toUpperCase();
+                        if(eventTitle.includes(searchValue)){
+                            boxElements[i].style.display ='block';
+                            isFound = 1;
+                        }else{
+                            boxElements[i].style.display='none';
+                        }
+                        i++;
+                   }//end of while
+                   if(isFound==0){
+                      var mainbox = document.getElementById('flexcontain');
+                        mainbox.innerHTML="No event found";
+                    }
+                }
+            </script>
 
     </body>
 </html>
