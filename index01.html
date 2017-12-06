@@ -115,6 +115,22 @@
                 margin: 0em .7em 0em .7em;
 
             }
+            .eventbox .category{
+                text-transform: uppercase;
+                margin: -11em .7em 0em .7em;
+                width: 70px;
+                z-index: 999;
+                font-size: 1em;
+                position: sticky;
+                color: white;
+                float: right;
+                font-weight: 900;
+                border-radius: .3em;
+                padding: .2em;
+                text-align: center;
+                background-color: #1080B0;
+                font-family: 'agency', Arial, Helvetica, sans-serif;
+            }
             video{
 
                 width: 100%;
@@ -266,7 +282,7 @@
         </div>
         <div class="container">
             <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
-            <label id="searchlabel">Seach Events by Category</label> <input type="text" id="search">
+            <label id="searchlabel">Seach Events by Category</label> <input type="text" id="search" onkeyup="narrowEvents()">
             <!--Example of traditonal float layout and CSS Flexbox-->
             <main id="flexcontain">
                 <section class="eventbox" data-catagory="family">
@@ -372,5 +388,35 @@
         <footer>
             <!--Do example of CSS Grid-->
         </footer>
+    <!--Implementation of Internal JS-->
+    <script>
+
+        function narrowEvents(){
+            //declare
+            var searchValue, eventArray, boxElements, x, eventTitle, isFound;
+
+            //initialize
+            searchValue = document.getElementById('search').value.toUpperCase();
+            eventArray = document.getElementsByTagName('h4');
+            boxElements = document.getElementsByTagName('section');
+            
+            
+            x=0;
+            while(x < eventArray.length){
+                eventTitle = eventArray[x].innerHTML.toUpperCase();
+                if(eventTitle.includes(searchValue)){
+                    boxElements[x].style.display='block';
+                    
+                }else{
+                    boxElements[x].style.display='none';
+                }
+                x++;
+
+            }
+
+
+        }
+        
+    </script>
     </body>
 </html>
