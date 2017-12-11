@@ -203,6 +203,21 @@
                 display: flex;
                 flex-wrap: wrap;
             }
+            #searchlabel{
+                font-family: 'agency', Arial, Helvetica, sans-serif;
+                word-spacing: 6px;
+                color: #24292e;
+                text-transform: uppercase;
+                margin-right: 1em;
+                font-size: 1.6em;
+                margin-bottom: 2em;
+            }
+            input[id="search"]{
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-size: 18px;
+                height: 26px;
+                margin-bottom: 2em;
+            }
 
             /* smaller than 1024 pixels */
             @media screen and (max-width: 1024px) {
@@ -272,8 +287,16 @@
             <!--Things that change will go in between the header and footer-->
             <div class="container">
                 <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
-               <label style="color: black;">Seach Events by Category</label> <input type="text" id="search" onkeyup="narrowEvents()">
-                
+               <label id="searchlabel">Seach Events by Category</label> <input type="text" id="search">
+               <label id="searchlabel">Select Category</label>
+               <select>
+                <option value="select">Select a Category</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="family">Family</option>
+                <option value="night-life">Night Life</option>
+                <option value="free">Free</option>
+                <option value="networking">Networking</option>
+              </select>
                 <main id="flexcontain">
                     <section class="eventbox" data-catagory="family">
                         <img src="images/fieldgoalkick.png" alt="field goal kicking event">
@@ -379,24 +402,7 @@
 
             <script>
 
-                function narrowEvents(){
-                   var searchValue= document.getElementById('search').value.toUpperCase();
-                   var isFound = 0;
-                   var eventArray = document.getElementsByTagName('h4');
-                   var boxElements = document.getElementsByTagName('section');
-                    var i = 0;
-                   while(i < eventArray.length){
-                    var eventTitle = eventArray[i].innerHTML.toUpperCase();
-                        if(eventTitle.includes(searchValue)){
-                            boxElements[i].style.display ='block';
-                            isFound = 1;
-                        }else{
-                            boxElements[i].style.display='none';
-                        }
-                        i++;
-                   }//end of while
 
-                }
             </script>
 
     </body>
