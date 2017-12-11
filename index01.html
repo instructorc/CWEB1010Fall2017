@@ -204,11 +204,12 @@
                 font-size: 1.6em;
                 margin-bottom: 2em;
             }
-            input[id="search"]{
+            input[id="search"], select[onchange="searchCategory(this.value)"]{
                 font-family: 'Open Sans Condensed', sans-serif;
-                font-size: 18px;
-                height: 26px;
+                font-size: 22px;
+                height: 40px;
                 margin-bottom: 2em;
+                margin-right: 2em;
             }
             /* smaller than 1024 pixels */
             @media screen and (max-width: 1024px) {
@@ -283,6 +284,15 @@
         <div class="container">
             <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
             <label id="searchlabel">Seach Events by Category</label> <input type="text" id="search" onkeyup="narrowEvents()">
+            <label id="searchlabel">Select Category</label>
+            <select onchange="searchCategory(this.value)">
+               <option value="all">Select a Category</option>
+               <option value="volunteer">Volunteer</option>
+               <option value="family">Family</option>
+               <option value="night-life">Night Life</option>
+               <option value="free">Free</option>
+               <option value="networking">Networking</option>
+             </select>
             <!--Example of traditonal float layout and CSS Flexbox-->
             <main id="flexcontain">
                 <section class="eventbox" data-catagory="family">
