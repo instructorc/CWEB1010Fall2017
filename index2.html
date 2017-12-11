@@ -424,7 +424,22 @@
                     }
                     i++;
                 }
+            }
 
+            function searchCategory(value){
+                var boxElements, i;
+                boxElements = document.getElementsByTagName('section');
+                i = 0; //starting value
+
+                        //condition statement
+                while(i < boxElements.length){
+                    if(value == boxElements.dataset.catagory){
+                        boxElements[i].style.display = 'block';
+                    }else{
+                        boxElements[i].style.display= 'none';
+                    }
+                    i++; //incrementing statement
+                }
 
             }
 
