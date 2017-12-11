@@ -287,7 +287,7 @@
             <!--Things that change will go in between the header and footer-->
             <div class="container">
                 <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
-               <label id="searchlabel">Seach Events by Category</label> <input type="text" id="search">
+               <label id="searchlabel">Seach Events by Category</label> <input type="text" id="search" onkeyup="narrowEvents()">
                <label id="searchlabel">Select Category</label>
                <select>
                 <option value="select">Select a Category</option>
@@ -399,8 +399,37 @@
             </div>
             <footer>
             </footer>
-
+            <!--Internal Implementation of JS-->
             <script>
+                //defining function
+                function narrowEvents(){
+                    //declaring a variable
+                    var searchEvent, boxElements, eventArray, i, eventTitle;
+                    //initialize variable
+                    searchEvent = document.getElementById('search').value.toUpperCase();
+                    boxElements = document.getElementsByTagName('section');
+                    eventArray = document.getElementsByTagName('h4');
+                    i = 0; //starting value
+                    var isFound = 0;
+                        //condition
+                    while(i < eventArray.length){
+                        eventTitle = eventArray[i].innerHTML.toUpperCase();
+                        if(eventTitle.includes(searchEvent)){
+                            boxElements[i].style.display = 'display';
+                            isFound = 1;
+                        }else{
+                            boxElements[i].style.display = 'none';
+                        }
+                        i++;
+                    }
+
+                    /**if(isFound == 0){
+                        for(var x =0; x < boxElements.length; x++){
+                            boxElements[i].style.display = 'display';  
+                        }
+                    }**/
+
+                }
 
 
             </script>
