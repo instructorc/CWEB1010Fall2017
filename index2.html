@@ -217,11 +217,12 @@
                 font-size: 1.6em;
                 margin-bottom: 2em;
             }
-            input[id="search"]{
+            input[id="search"], select[onchange="searchCategory(this.value)"]{
                 font-family: 'Open Sans Condensed', sans-serif;
-                font-size: 18px;
-                height: 26px;
+                font-size: 22px;
+                height: 40px;
                 margin-bottom: 2em;
+                margin-right: 2em;
             }
             /* smaller than 1024 pixels */
             @media screen and (max-width: 1024px) {
@@ -287,52 +288,61 @@
         <div class="container">
             <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
             <label id="searchlabel">Seach Events by Event Title</label> <input type="text" id="search" onkeyup="narrowEvents()">
+            <label id="searchlabel">Select Category</label>
+            <select onchange="searchCategory(this.value)">
+               <option value="all">Select a Category</option>
+               <option value="volunteer">Volunteer</option>
+               <option value="family">Family</option>
+               <option value="night-life">Night Life</option>
+               <option value="free">Free</option>
+               <option value="networking">Networking</option>
+             </select>
             <!--Demonstration of traditional float layout and Flexbox-->
             <main id="flexcontain">
                 <section class="eventbox" data-catagory="family">
-                    <img src="images/fieldgoalkick.png" alt="field goal kicking event"> 
+                    <img src="images/family.png" alt="field goal kicking event"> 
                     <h4>Field Goal and Obstacle Tournament</h4>
                     <p>Put your team to the test by going through our football training camp</p>
                     <div class="category">Family</div>
                 </section>
                 <section class="eventbox" data-catagory="family">
-                        <img src="images/giveaway.png" alt="field goal kicking event">
+                        <img src="images/family.png" alt="field goal kicking event">
                         <h4>Football hunt at US Bank Stadium</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Family</div>
                 </section>
                 <section class="eventbox" data-catagory="family">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/family.png" alt="field goal kicking event">
                         <h4>Downtown Minneapolis Parade</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Family</div>
                 </section>
                 <section class="eventbox" data-catagory="family">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/family.png" alt="field goal kicking event">
                         <h4>Family Movie Night at Target Center</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Family</div>
                 </section>
                 <section class="eventbox" data-catagory="night-life">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/nightlife.png" alt="field goal kicking event">
                         <h4>Superbowl Wine tasting on 8th Street</h4>
                         <p>Put your team to the test by going through our football training camp</p>
                         <div class="category">NightLife</div>
                 </section>
                 <section class="eventbox" data-catagory="free">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/giveaway.png" alt="field goal kicking event">
                         <h4>Field Goal and Obstacle Tournament</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Free</div>
                 </section>
                 <section class="eventbox" data-catagory="networking">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/nightlife.png" alt="field goal kicking event">
                         <h4>Come to Randles Restuarant and chat with Vikings Administration</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Networking</div>
                 </section>
                 <section class="eventbox" data-catagory="networking">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/nightlife.png" alt="field goal kicking event">
                         <h4>Field Goal and Obstacle Tournament</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Family</div>
@@ -350,13 +360,13 @@
                         <div class="category">Volunteer</div>
                 </section>
                 <section class="eventbox" data-catagory="networking">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/nightlife.png" alt="field goal kicking event">
                         <h4>Senior Social at Dunwoody College</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Networking</div>
                 </section>
                 <section class="eventbox" data-catagory="networking">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/nightlife.png" alt="field goal kicking event">
                         <h4>Sports career fair at Univ. of Minnesota</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Networking</div>
@@ -368,19 +378,19 @@
                         <div class="category">Volunteer</div>
                 </section>
                 <section class="eventbox" data-catagory="family">
-                        <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                        <img src="images/family.png" alt="field goal kicking event">
                         <h4>Family Ice Skating event outside US Bank</h4>
                         <p>Put your team to the test by going through our football training camp </p>
                         <div class="category">Family</div>
                 </section>
                 <section class="eventbox" data-catagory="night-life">
-                    <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                    <img src="images/nightlife.png" alt="field goal kicking event">
                     <h4>21+ Night Bowling Superbowl tournament</h4>
                     <p>Put your team to the test by going through our football training camp </p>
                     <div class="category">NightLife</div>
                 </section>
                 <section class="eventbox" data-catagory="free">
-                    <img src="images/fieldgoalkick.png" alt="field goal kicking event">
+                    <img src="images/giveaway.png" alt="field goal kicking event">
                     <h4>Toys-for-tots annual pitch-in</h4>
                     <p>Put your team to the test by going through our football training camp</p>
                     <div class="category">Free</div>
