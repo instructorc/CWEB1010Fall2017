@@ -212,11 +212,12 @@
                 font-size: 1.6em;
                 margin-bottom: 2em;
             }
-            input[id="search"]{
+            input[id="search"], select[onchange="searchCategory(this.value)"]{
                 font-family: 'Open Sans Condensed', sans-serif;
-                font-size: 18px;
-                height: 26px;
+                font-size: 22px;
+                height: 40px;
                 margin-bottom: 2em;
+                margin-right: 2em;
             }
 
             /* smaller than 1024 pixels */
@@ -289,8 +290,8 @@
                 <h3>BROWSE THROUGH THE EVENTS BELOW AND SORT BY CATAGORY</h3>
                <label id="searchlabel">Seach Events by Category</label> <input type="text" id="search" onkeyup="narrowEvents()">
                <label id="searchlabel">Select Category</label>
-               <select>
-                <option value="select">Select a Category</option>
+               <select onchange="searchCategory(this.value)">
+                <option value="all">Select a Category</option>
                 <option value="volunteer">Volunteer</option>
                 <option value="family">Family</option>
                 <option value="night-life">Night Life</option>
@@ -345,7 +346,7 @@
                             <img src="images/fieldgoalkick.png" alt="field goal kicking event">
                             <h4>Field Goal and Obstacle Tournament</h4>
                             <p>Put your team to the test by going through our football training camp obstacle course</p>
-                            <div class="category">Family</div>
+                            <div class="category">Networking</div>
                     </section>
                     <section class="eventbox" data-catagory="volunteer">
                             <img src="images/fieldgoalkick.png" alt="field goal kicking event">
@@ -415,7 +416,7 @@
                     while(i < eventArray.length){
                         eventTitle = eventArray[i].innerHTML.toUpperCase();
                         if(eventTitle.includes(searchEvent)){
-                            boxElements[i].style.display = 'display';
+                            boxElements[i].style.display = 'block';
                             isFound = 1;
                         }else{
                             boxElements[i].style.display = 'none';
@@ -423,11 +424,26 @@
                         i++;
                     }
 
-                    /**if(isFound == 0){
-                        for(var x =0; x < boxElements.length; x++){
-                            boxElements[i].style.display = 'display';  
+
+                }
+
+                function searchCategory(value){
+                    var boxElements, i;
+                    boxElements = document.getElementsByTagName('section');
+                    console.log(value);
+                    console.log(boxElements)
+                    i = 0;
+                    while(i < boxElements.length){
+                        if(value == boxElements[i].dataset.catagory){
+                            boxElements[i].style.display = 'block';
+                        
+                        }else if(value == 'all') {
+                            boxElements[i].style.display = 'block';
+                        }else{
+                            boxElements[i].style.display = 'none';
                         }
-                    }**/
+                        i++;
+                    }  
 
                 }
 
