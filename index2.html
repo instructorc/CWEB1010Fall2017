@@ -433,9 +433,12 @@
 
                         //condition statement
                 while(i < boxElements.length){
-                    if(value == boxElements.dataset.category){
+                    if(value == boxElements[i].dataset.category){
                         boxElements[i].style.display = 'block';
-                    }else{
+                    }else if(value == 'all'){
+                        boxElements[i].style.display = 'block';
+                    }else
+                    {
                         boxElements[i].style.display= 'none';
                     }
                     i++; //incrementing statement
